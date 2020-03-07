@@ -1,0 +1,1 @@
+$(".depoimentos").slick({arrows:!1,dots:!0,slidesToShow:1,slidesToScroll:1,infinite:!0,autoplay:!0,speed:200,variableWidth:!1,centerMode:!1,focusOnSelect:!0});
