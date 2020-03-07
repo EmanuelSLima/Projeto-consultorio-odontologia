@@ -7,603 +7,430 @@
     -moz-box-sizing: border-box;
 }
 
-/*Classes auxiliares*/
-html, body{
-    height: 100%;
-    font-family: 'Oswald', sans-serif;
+/*Estilo para o plugin Slick*/
+.slick-dotted ul{
+    list-style-type: none;
+    text-align: center;
+    position: relative;
+    margin-top: 50px;
 }
+.slick-dotted ul li{
+    display: inline;
+    margin: 0 7px;
+}
+.slick-dotted button:focus{
+    outline: none;
+}
+.slick-dotted li button{
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    color: #d8d8d8;
+    border-width: 0;
+    background-color: #d8d8d8;
+    cursor: pointer;
+}
+li.slick-active button{
+    background-color: #688293;
+    color: #688293;
+}
+.slick-slide:focus{
+    outline: none;
+}
+
+/*Classes auxiliares*/
 .container{
     margin: 0 auto;
-    max-width: 980px;
+    max-width: 1150px;
+    padding: 0 2%;
     width: 100%;
 }
 .clear{
     clear: both;
 }
+body{
+    font-family: 'Montserrat', sans-serif;
+}
 .w100{
-    width: 100%;
     float: left;
+    width: 100%;
 }
 .w50{
-    width: 50%;
     float: left;
+    width: 50%;
 }
-/*Fomatacao do slide*/
-.slick-dotted ul{
-    list-style: none;
-    margin-top: 10px;
-    text-align: center;
+.w33{
+    float: left;
+    width: 33.3%;
 }
-.slick-dotted ul li{
-    display: inline-block;
-    margin-right: 12px;
-  
-}
-.slick-dotted ul li button{
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 0;
-    outline: none;
-    color: white;
-    background-color: white;
-}
-.slick-dotted ul li button:focus{
-    background-color: black;
-    color: black;
-}
-/*Header*/
-header{
-    background: white;
+
+/*Classe cabecalho*/
+.cabecalho{
+    background-attachment: fixed;
     padding: 10px 0;
-    border-bottom: 1px solid #ccc;
 }
 .logo{
     float: left;
 }
-
-/*Classe menu-desktop*/
 .menu-desktop{
     float: right;
 }
+
+/*Classe menu-principal*/
 .menu-desktop ul{
     list-style: none;
-    margin-top: 35px;
+    margin-top: 12px;
 }
 .menu-desktop ul li{
-    display: inline-block;
-    margin-right: 20px;
+    float: left;
+    text-transform: uppercase;
+    margin-right: 30px;
 }
 .menu-desktop ul li a{
     text-decoration: none;
-    color: black;
-    text-transform: uppercase;
-    font-size: 17px;
-    font-style: italic;
-}
-.menu-desktop ul li:hover a{
-    color: red;
+    color: #b4b4b4;
+    font-size: 14px;
 }
 
 /*Classe menu-mobile*/
 .menu-mobile{
     display: none;
-    margin-top: 30px;
-    width: 32px;
-    height: 30px;
-    background-image: url('../img/menu-mobile.png');
-    background-size: 100% 100%;
     float: right;
+    background-image: url('../img/menu-mobile.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 12px;
     cursor: pointer;
+    width: 28px;
+    height: 28px;
 }
 .menu-mobile ul{
-    position: absolute;
-    list-style: none;
-    top: 108px;
-    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
     width: 100%;
-    z-index: 999;
-    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 63px;
+    z-index: 10;
     text-align: center;
 }
 .menu-mobile ul li{
-    border-bottom: 1px solid silver;
-    padding: 10px 0;
+    padding: 15px 0;
+    border: 1px solid rgb(98, 98, 98);
 }
 .menu-mobile ul li a{
     text-decoration: none;
-    color: black;
-    font-size: 17px;
-    font-style: italic;
-}
-
-/*Classe banner*/
-.banner{
-    width: 100%;
-    min-height: 640px;
-    background-image: url('../img/bg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.text-banner{
-    padding: 100px;
-}
-.text-banner-single{
-    width: 314px;
-    height: 60px;
-    background-image: url('../img/box-text.png');
-    background-size: 100% 100%;
     color: white;
-    font-size: 20px;
-    padding: 15px 30px;
-    text-transform: uppercase;
-    margin-top: 15px;
-}
-.text-banner-single:nth-of-type(2){
-    width: 250px;
-    position: relative;
-    left: -10px;
-}
-.text-banner-single:nth-of-type(3){
-    width: 200px;
-    position: relative;
-    left: -20px;
-}
-.text-banner-single:nth-of-type(4){
-    width: 314px;
-    background-image: url('../img/box-white-text.png');
-    color: black;
-    position: relative;
-    left: -30px;
 }
 
-/*Classe line*/
-.line{
-    padding: 50px 0;
-}
-.line h2{
-    text-align: center;
-    font-size: 20px;
-    font-weight: normal;
-    font-style: italic;
-    text-transform: uppercase;
+/*Classe container-mosaico*/
+.mosaico-sigle{
     float: left;
-    width: 20%;
-    margin-top: -15px;
+    width: calc(100%/6);  
 }
-.container-line{
-    margin: 0 auto;
-}
-span{
-    display: inline;
-    width: 40%;
-    height: 2px;
-    float: left;
-    background-color: black;
-}
-
-/*Classe line-2*/
-.line-2{
-    padding: 50px 0 20px 0;
-}
-.line-2 h2{
-    text-align: center;
-    font-size: 20px;
-    font-weight: normal;
-    font-style: italic;
-    text-transform: uppercase;
-    float: left;
-    width: 10%;
-    margin-top: -15px;
-}
-.container-line{
-    margin: 0 auto;
-}
-.span-2{
-    display: inline;
-    width: 45%;
-    height: 2px;
-    float: left;
-    background-color: black;
-}
-
-/*Classe vitrine-veiculos*/
-.vitrine-veiculos{
-    padding-bottom: 30px;
-}
-.carro-img{
+.img-mosaico-sigle{
     width: 100%;
-    padding-top: 60%;
-    background-image: url('../img/veiculo-1.jpg');
+    padding-top: 100%;
+    background-color: silver;
+    border: 1px solid white;
+}
+
+/*Classe servicos*/
+.servicos > .container{
+    display: flex;
+    max-width: 800px;
+    align-items: center;
+    position: relative;
+    top: -30px;
+    text-align: center;
+}
+.box-servicos{
+    background: url('../img/icone_dente.png');
+    background-size: 18px 18px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+.box-servicos h2{
+    color: white;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.box-servicos p{
+    color: white;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+.box-servicos:nth-of-type(1){
+    width: 30%;
+    padding: 40px 2%;
+    background-color: #576975;
+}
+.box-servicos:nth-of-type(2){
+    width: 40%;
+    padding: 70px 2%;
+    background-color: #688293;
+    background-image: none;
+}
+.box-servicos:nth-of-type(3){
+    width: 30%;
+    padding: 40px 2%;
+    background-color: #576975;
+}
+
+/*Classe perfil-container*/
+.perfil-container > .container{
+    max-width: 800px;
+}
+.perfil-wrap{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items:center;
+}
+.img-perfil{
+    width: 40%;
+    height: 400px;
+    background-image: url('../img/img_perfil.png');
     background-size: contain;
     background-repeat: no-repeat;
-    border-left: 20px solid white;
 }
-.info-carro{
-    width: 33.3%;
-    float: left;
-    text-align: center;
+.texto-perfil{
+    width: 60%;
+    margin: 0 20px;
 }
-.info-carro h2{
+.texto-perfil h2{
+    color: #698293;
     font-size: 18px;
     font-weight: normal;
-    font-style: italic;
 }
-.info-carro p{
-    font-size: 17px;
-    font-style: italic;
-    color: #353535;
-    margin: 5px 0 20px 0;
-}
-.info-carro a{
-    text-decoration: none;
-    color: white;
-    font-style: italic;
-    font-weight: bold;
-    background: red;
-    display: inline-block;
-    width: 180px;
-    padding: 10px 0;
+.texto-perfil p{
+    color: #4b4b4b;
+    font-size: 14px;
+    margin-top: 10px;
 }
 
-/*Classe servicos-depoimentos*/
-.servicos-depoimentos{
-    display: flex;
+/*Classe galeria-videos*/
+.galeria-videos{
+    margin: 20px 0 40px 0;
 }
-.servicos{
-    width: 50%;
-    padding: 40px 0;
-    background-color: rgba(36, 36, 36, 1);
+.box-video{
+    width: 33.3%;
+    float: left;
+    border: 3px solid white;
 }
-.servicos-wrap{
-    width: calc(50% + 120px);
-    float: right;
-    color: white;
+.box-video iframe{
+    width: 100%;
+    height: 200px;
 }
-.servicos-wrap h2{
-    font-weight: normal;
-    font-style: italic;
-    font-size: 22px;
-    text-transform: uppercase;
-}
-.servicos-wrap ul{
-    list-style-position: inside;
-    margin-top: 20px;
-    padding-left: 15px;
+
+/*Classe tratamentos*/
+.container-tratamento{
+    width: 33.3%;
     float: left;
 }
-.servicos-wrap a{
-    text-decoration: none;
-    color: white;
-    font-style: italic;
-    font-weight: bold;
-    background: red;
-    display: inline-block;
-    text-align: center;
-    width: 110px;
+.tratamento-sigle{
+    padding: 20px 0;
+}
+.tratamento-sigle h2{
+    color: #737373;
+    font-size: 18px;
+    font-weight: normal;
+}
+.tratamento-sigle p{
+    font-size: 15px;
+    color: #727070;
     padding: 10px 0;
-    margin: 90px 0 0 20px;
+}
+.tratamentos  > h2{
+    color: #698293;
+    text-align: center;
+    font-size: 20px;
+    padding: 30px 0;
 }
 
 /*Classe depoimentos*/
-.depoimentos{
-    width: 50%;
-    padding: 40px 0;
-    background-color: rgba(235, 45, 45, 1);
-}
-.depoimentos-wrap{
-    width: calc(50% + 115px);
-    float: left;
-    padding: 10px 35px 10px 25px;
-    color: white;
-}
-.depoimentos-wrap h2{
-    font-weight: normal;
-    font-style: italic;
-    font-size: 22px;
-    text-transform: uppercase;
+.depoimentos > .container{
+    padding: 20px 2%;
+    max-width: 600px;
 }
 .depoimentos-single{
-    margin-top: 20px;
+    text-align: center;
 }
-.depoimentos-single p{
+.depoimentos-single quote{
     font-size: 15px;
-}
-.navegacao{
-    margin-top: 20px;
-}
-.arrows img{
-    margin: 0 8px;
-    cursor: pointer;
-    float: left;
+    color: #a5a5a5;
 }
 .nome-depoimentos{
+    padding: 8px 0;
+    text-align: center;
+}
+.nome-depoimentos img{
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    display: inline-block;
+}
+.nome-depoimentos span{
+    font-size: 13px;
+    color: #a5a5a5;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    top: 10px;
+}
+.depoimentos > h2{
+    color: #698293;
+    text-align: center;
+    font-size: 20px;
+    padding: 40px 0;
+}
+.nome-depoimentos img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/*Classe social*/
+.container-instagram{
+    width: 100%;
     float: left;
-    margin-left: 30px;
-    color: #252525;
-    font-size: 18px;
-    font-style: italic;
+    text-align: center;
+    padding: 40px 0;
+    background-color: #98a5ae;
+}
+.container-instagram p{
+    color: white;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/*Classe social-mosaico*/
+.social-mosaico{
+    float: left;
+    width: 100%;
+}
+.img-social-mosaico{
+    float: left;
+    width: calc(100% / 9);
+    padding-top: calc(100% / 9);
+    background-color: silver;
+    border: 3px solid white;
+}
+
+/*Classe container-facebook*/
+.container-facebook{
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding: 40px 0;
+    background-color: #576975;
+}
+.container-facebook p{
+    color: white;
+    font-size: 14px;
+    margin-top: 10px;
 }
 
 /*Classe contato*/
 .contato{
-    padding: 20px 0 40px 0;
+    padding: 60px 0 40px 0;
 }
-.contato .container{
+.contato h2{
+    color: #698293;
+    font-size: 20px;
+    text-align: center;
+}
+.contato form{
+    width: 100%;
     max-width: 600px;
+    margin: 30px auto;
 }
-.box-contato{
-    width: 100%;
-}
-input[type=text], input[type=email], input[type=tel]{
-    width: 100%;
-    height: 40px;
-    padding-left: 10px;
+.wrap-form{
     margin-bottom: 20px;
-    border: 1px solid silver;
-    line-height: 40px;
-    outline: none;
-}
-.w100, .w50{
     padding: 0 5px;
 }
-textarea{
+.wrap-form label{
+    color: #b4b4b4;
+    font-size: 15px;
+}
+.wrap-form input[type=text], input[type=email], input[type=tel]{
     width: 100%;
-    height: 160px;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 10px;
+    outline: none;
+    border: 1px solid #ccc;
+    margin-top: 8px;
+}
+.wrap-form textarea{
+    width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid silver;
+    margin-top: 10px;
+    height: 150px;
+    outline: none;
+    border: 1px solid #ccc;
     resize: none;
+}
+.wrap-form input[type=submit]{
+    color: white;
+    border: none;
     outline: none;
-}
-.btn-contato{
-    text-align: center;
-}
-.box-contato input[type=submit]{
-    text-decoration: none;
-    color: white;
-    font-style: italic;
-    font-weight: bold;
-    background: red;
-    display: inline-block;
-    width: 120px;
-    padding: 10px 0;
-    border: 0;
-    outline: none;
+    width: 100px;
+    height: 35px;
+    background: #688293;
     cursor: pointer;
 }
 
-/*Footer*/
-footer{
-    padding-bottom: 30px;
-    background-color: #252525;
-    
-}
-footer .menu-desktop{
-    float: left;
-}
-footer .menu-desktop ul li a{
-    color: white;
-}
-footer p{
-    float: right;
-    margin-top: 35px;
-    color: white;
-    font-size: 16px;
-    font-weight: lighter;
-    font-style: italic;
-}
-
-/*Pagina venda*/
-.venda{
-    min-height: 90vh;
-}
-aside{
-    float: left;
-    width: 30%;
-}
-.search-1 h2{
-    font-size: 18px;
-    color: black;
-    font-weight: normal;
-}
-.barra-preco{
-    width: 100%;
-    height: 15px;
-    margin-top: 12px;
-    border-radius: 20px;
-    border: 2px solid #ccc;
-    position: relative;
-}
-.barra-preco-fill{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0;
-    height: 12px;
-    border-radius: 20px;
-    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(200, 200, 200));
-}
-.pointer-barra{
-    width: 15px;
-    height: 28px;
-    position: absolute;
-    top: -8px;
-    left: calc(30% - 0);
-    border-radius: 8px;
-    cursor: pointer;
-    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(200, 200, 200));
-    border: 1px solid black;
-}
-.valor-pesquisa{
-    margin-top: 10px;
-    font-size: 15px;
-}
-.valor-pesquisa p:nth-of-type(1){
-    float: left;
-}
-.valor-pesquisa p:nth-of-type(2){
-    float: right;
-}
-.search-2{
-    margin-top: 60px;
-}
-.search-2 h2{
-    font-size: 18px;
-    color: black;
-    font-weight: normal;
-}
-.search-2 form{
-    margin-top: 10px;
-}
-.opcao-form{
-    margin-top: 10px;
-}
-.opcao-form label{
-    cursor: pointer;
-    margin-left: 10px;
-}
-
-/*Classe vitrine-venda*/
-.vitrine-venda{
-    float: left;
-    width: 70%;
-    min-height: 90vh;
-}
-.vitrine-venda .info-carro{
-    margin-bottom: 60px;
-}
-
-/*Formatacao da Pagina teste*/
-/*Classe venda single e classe galeria-carro*/
-.venda-single > .container{
-    padding: 20px 0;
-    width: 100%;
-}
-.galeria-carro{
-    width: 60%;
-    float: left;
-}
-.box-slider{
-    width: 100%;
-}
-.slider-for{
-    height: auto;
-    width: 100%;
-}
-.slider-nav{
-    width: 100%;
-    border: 2px solid silver;
-}
-.slider-for img, .slider-nav img{
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
-    border: 4px solid white;
-}
-/*Classe info-car*/
-.info-car{
-    width: 40%;
-    float: right;
-    padding: 20px;
-}
-.info-car h2{
-    font-weight: normal;
-    font-size: 20px;
-}
-.info-car p{
-    margin: 40px 0;
-    font-size: 15px;
-    font-weight: normal;
-}
-.info-car a{
-    text-decoration: none;
-    color: white;
-    font-style: italic;
-    font-weight: bold;
-    background: red;
-    display: inline-block;
-    width: 120px;
-    padding: 10px 0;
-    border: 0;
-    outline: none;
-    cursor: pointer;
-    text-align: center;
-}
-
-
-/*Classe info-bread*/
-.container > .info-veiculos{
-    margin-top: 30px;
-}
-.info-bread{
-    text-align: left;
-    padding:  0 2%;
-}
-.info-bread a{
-    text-decoration: none;
-    color: black;
-    margin: 0 8px;
-}
-.info-bread a:nth-of-type(3){
-    color: red;
-}
-
-/*Página sobre*/
-.sobre{
-    min-height: 90vh;
-}
-.sobre .container{
-    max-width: 750px;
-}
-.img-destaque-sobre{
-    width: 100%;
-    padding-top: 70%;
-    margin-top: 20px;
-    background-color: rgba(220, 220, 220, 1);
-}
-.descricao-autor{
+/*Classe rodape-1 e rodape-2*/
+.rodape-1{
     padding: 40px 0;
+    background-color: #688293;
+    text-align: center;
+    color: white;
 }
-.descricao-autor h2{
-    color: black;
-    font-size: 20px;
-    font-weight: normal;
+.contato-rodape{
+    margin-top: 25px;
 }
-.descricao-autor p{
+.contato-rodape h2{
+    font-size: 18px;
+}
+.contato-rodape p{
     font-size: 15px;
-    color: black;
-    margin-top: 10px;
+    margin-top: 8px;
+    line-height: 25px;
 }
-.descricao-autor-2{
-    margin: 10px 0 60px 0;
-}
-.img-small{
-    width: 25%;
-    padding-top: 25%;
-    background-color: rgba(220, 220, 220, 1);
-    float: left;
-}
-.text-autor{
-    width: 75%;
-    float: left;
-}
-.text-autor p{
+.rodape-2{
+    background-color:  #526572;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
     font-size: 15px;
-    color: black;
-    padding: 10px;
-    text-align: left;
 }
 
 /*Formatacao para dispositivos mobiles*/
-@media screen and (max-width: 768px){
-    .container{
-        padding: 0 2%;
+@media screen and (max-width: 1024px){
+    .menu-desktop{
+        display: none;
     }
+    .menu-mobile{
+        display: block;
+    }
+    .img-social-mosaico{
+        float: left;
+        width: calc(100% / 6);
+        -webkit-width: calc(100% / 6);
+        -ms-width: calc(100% / 6);
+        padding-top: calc(100% / 6);
+        -webkit-padding-top: calc(100% / 6);
+        -ms-padding-top: calc(100% / 6);
+    }
+    .social-mosaico > div:nth-last-of-type(1n+7){
+        display: none;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px){
     .menu-desktop{
         display: none;
     }
@@ -613,132 +440,56 @@ aside{
     .menu-mobile ul{
         display: none;
     }
-    .banner{
-        width: 100%;
-        min-height: 400px;
-    } 
-    .text-banner{
-        position: relative;
-        left: -65px;
-    }
-    .text-banner-single{
-        height: 40px;
-        padding: 5px 30px;
-    }
-    .line h2{
-        width: 50%;
-    }
-    span{
-        width: 25%;
-    }
-    .line-2 h2{
-        width: 20%;
-    }
-    .span-2{
-        width: 40%;
-    }
-    .vitrine-veiculos{
-        text-align: center;
-    }
-    .info-carro{
-        margin-bottom: 30px;
-        width: 80%;
-        float: none;
-        display: inline-block;
-    }
-    .servicos-wrap{
-        padding: 0 2%;
-    }
-    .servicos-wrap a{
-        margin: 15px 25px;
-    }
-    .servicos-depoimentos{
+    .servicos > .container{
         flex-direction: column;
     }
-    .servicos{
-        width: 100%;
+    .box-servicos:nth-of-type(1){
+        width: 80%;
+        padding: 35px 2%;
     }
-    .servicos-wrap{
-        width: 100%;
+    .box-servicos:nth-of-type(2){
+        width: 85%;
+        padding: 65px 2%;
     }
-    .depoimentos{
-        width: 100%;
+    .box-servicos:nth-of-type(3){
+        width: 80%;
+        padding: 35px 2%;
     }
-    .servicos-wrap a{
-        margin-top: 95px;
+    .perfil-wrap{
+        flex-direction: column;
     }
-    footer p{
-        float: none;
+    .img-perfil{
+        width: 60%;
+        height: 400px;
+        background-image: url('../img/img_perfil.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .texto-perfil{
+        width: 70%;
         text-align: center;
-        padding-top: 30px;
     }
-
-    /*Pagina venda*/
-    .vitrine-venda{
+    .box-video{
         width: 100%;
-        text-align: center;
+    }
+    .galeria-videos{
+        margin: 20px 0;
+    }
+    .box-video iframe{
         margin-top: 30px;
     }
-    .venda aside{
-        width: 100%;
-        text-align: center;
+    .img-social-mosaico{
+        float: left;
+        width: calc(100% / 3);
+        padding-top: calc(100% / 3);
     }
-    .search-2 .opcao-form{
-        text-align: left;
+    .social-mosaico > div:nth-last-of-type(1n+4){
+        display: none;
     }
-    .search-2 form{
-        max-width: 170px;
-        margin: 0 auto;
-    }
-    .search-2 h2{
-        text-align: left;
-    }
-    .info-veiculos{
-        width: 100%;
-        padding: 0 2%;
-    }
-    .descricao-destaque{
-        width: 100%;
-        padding: 0 2%;
-        text-align: center;
-    }
-    .descricao-destaque p{
-        text-align: left;
-    }
-
-    /*Pagina sobre*/
-    .descricao-autor-2{
-        text-align: center;
-    }
-    .img-small{
-        width: 60%;
-        padding-top: 60%;
-        float: none;
-        display: inline-block;
-        text-align: center;
-    }
-    .text-autor{
+    .w50{
         width: 100%;
     }
-    .text-autor p{
-        text-align: center;
-    }
-    .galeria-carro{
+    .w33{
         width: 100%;
-    }
-    .venda-single > .container{
-        padding: 10px 2%;
-    }
-    .info-car{
-        width: 100%;
-        text-align: center;
-    }
-    .info-car p{
-        margin: 10px 0;
     }
 }
-
-
-
-
-

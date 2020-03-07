@@ -1,0 +1,1 @@
+$(function(){$("nav a").click(function(){var t=$(this).attr("href"),n=$(t).offset().top;return $("html, body").animate({scrollTop:n}),!1})});

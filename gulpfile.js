@@ -29,5 +29,3 @@ gulp.task('uglify', gulp.series( ()=>{
 }));
 
 gulp.task('default', gulp.parallel('cssmin', 'htmlmin', 'imagemin', 'uglify'));
-
-
