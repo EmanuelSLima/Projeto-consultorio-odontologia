@@ -24,7 +24,7 @@ Projeto criado com objetivo de colocar em prática o conhecimento adquirido nas 
 
 * Google Chrome
 * Firefox
-* Intenet Explorer
+* Internet Explorer
 * Microsoft Edge
 * Opera
 
